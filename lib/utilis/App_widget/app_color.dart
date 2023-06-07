@@ -12,6 +12,15 @@ const kTEXTFIELDBACKGROUND = Color(0xFFF9FAFB);
 const kBorderLineColor = Color(0xFFE5E7EB);
 const kLightButton = Color(0xFF727272);
 const kINACTIVECOLOR = Color(0xB1111827);
+const kFlut = Color(0xFFE5E5E5);
+const kFluti = Color(0xFF33907C);
+const kFluts = Color( 0xFFD8D8D8);
+const kFlutsi = Color( 0xFFE5E5E5);
+const kFlutsi2 = Color( 0xFFD8D8D8);
+const kFlutsi4 = Color( 0xFFD33907C);
+
+
+
 
 Map<int, Color> kPrimaryColorMap = {
   50: const Color.fromRGBO(17, 24, 39, .1),
