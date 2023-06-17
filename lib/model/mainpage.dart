@@ -3,18 +3,21 @@ import 'package:tradly2/utilis/App_widget/app_color.dart';
 import 'package:tradly2/utilis/App_widget/dimention.dart';
 
 class contax extends StatelessWidget {
-  final Image imagePath;
+
   const contax({
     super.key,
-    required this.title,
-    required this.storeName,
-    required this.price,
     required this.imagePath,
+    required this.productName,
+    required this.supplierName,
+    required this.mainPrice,
+    r
   });
 
-  final String title;
-  final String storeName;
-  final String price;
+final String imagePath;
+ final String  productName;
+  final String supplierName;
+   final String mainPrice;
+
   @override
   Widget build(BuildContext context) {
     return Row(
@@ -31,13 +34,13 @@ class contax extends StatelessWidget {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                imagePath,
+            Image.asset(imagePath),
                 SizedBox(
                   height: getScreenHeight(9),
                 ),
                 Padding(
                   padding: EdgeInsets.only(right: getScreenWidth(70)),
-                  child: Text(title),
+                  child: Text(productName),
                 ),
                 SizedBox(
                   height: getScreenHeight(10),
@@ -66,11 +69,11 @@ class contax extends StatelessWidget {
                       SizedBox(
                         width: getScreenWidth(10),
                       ),
-                      Text(storeName),
+                      Text(supplierName),
                       SizedBox(
                         width: getScreenWidth(40),
                       ),
-                      Text(price)
+                      Text(mainPrice)
                     ],
                   ),
                 ),

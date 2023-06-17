@@ -20,7 +20,16 @@ class _Product_detailsState extends State<Product_details> {
           backgroundColor: kPRYCOLOUR,
         ),
         body: ListView(children: [
-          Image.asset("assets/images/clo.png"),
+          //  Image.asset("assets/images/clo.png"),
+          Container(
+            height: getScreenHeight(200),
+            width: getScreenWidth(30),
+            decoration: const BoxDecoration(
+              image: DecorationImage(
+                  image: AssetImage("assets/images/clo.png"),
+                  fit: BoxFit.cover),
+            ),
+        child: Column(),  ),
           SizedBox(
             height: getScreenHeight(20),
           ),

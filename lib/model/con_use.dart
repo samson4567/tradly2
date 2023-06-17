@@ -3,8 +3,8 @@ import 'package:flutter/material.dart';
 import '../utilis/App_widget/app_color.dart';
 import '../utilis/App_widget/dimention.dart';
 
-class container extends StatelessWidget {
-  const container({
+class Heading extends StatelessWidget {
+  const Heading({
     super.key,
     required this.title,
   });
@@ -64,7 +64,7 @@ class container extends StatelessWidget {
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    Icon(
+                    const Icon(
                       Icons.soap_sharp,
                       color: kWHTCOLOUR,
                     ),

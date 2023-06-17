@@ -1,10 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:tradly2/model/con_tax.dart';
+import 'package:tradly2/model/mainpage.dart';
 import 'package:tradly2/screen/widget/beverages.dart';
 import 'package:tradly2/screen/widget/browse.dart';
 import 'package:tradly2/screen/widget/myCart.dart';
-import 'package:tradly2/screen/widget/create_store.dart';
-import 'package:tradly2/screen/onboarding/onboarding_1.dart';
 import 'package:tradly2/screen/widget/order_history.dart';
 import 'package:tradly2/screen/widget/product_details.dart';
 import 'package:tradly2/screen/widget/profile.dart';
@@ -12,6 +10,7 @@ import 'package:tradly2/screen/widget/store.dart';
 import 'package:tradly2/screen/widget/wishlist.dart';
 import 'package:tradly2/utilis/App_widget/app_color.dart';
 import 'package:tradly2/utilis/App_widget/dimention.dart';
+import 'package:tradly2/utilis/App_widget/route.dart';
 
 class Home_dashboard extends StatefulWidget {
   const Home_dashboard({super.key});
@@ -99,156 +98,72 @@ class _Home_dashboardState extends State<Home_dashboard> {
               ],
             ),
           ),
-          Stack(
+          Container(
+            height: getScreenHeight(200),
+            width: getScreenWidth(30),
+            decoration: const BoxDecoration(
+              image: DecorationImage(
+                  image: AssetImage("assets/images/Beverages.png"),
+                  fit: BoxFit.cover),
+            ),
+            child: const Center(
+              child: Text(
+                "dwlsnf.kavdjfsnv",
+                style: TextStyle(color: kWHTCOLOUR),
+              ),
+            ),
+          ),
+
+          SizedBox(height: getScreenHeight(1),),
+          Column(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              Container(
-                height: getScreenHeight(200),
-                width: getScreenWidth(400),
-                color: kWHTCOLOUR,
-                child: Row(
-                  children: [
-                    Image.asset("assets/images/fruit.png"),
-                    Image.asset("assets/images/flower.png"),
-                  ],
-                ),
-              )
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: const [
+                  keyLink(
+                    imagePath: ("assets/images/Beverages.png"),
+                    name: 'Beverages',
+                  ),
+                  keyLink(
+                    imagePath: ("assets/images/Bread.png"),
+                    name: 'Bread/Bakery',
+                  ),
+                  keyLink(
+                    imagePath: ("assets/images/moi.png"),
+                    name: 'vegetables',
+                  ),
+                  keyLink(
+                    imagePath: ("assets/images/fr.png"),
+                    name: 'fruit',
+                  ),
+                ],
+              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: const [
+                  keyLink(
+                    imagePath: ("assets/images/egg.png"),
+                    name: 'egg',
+                  ),
+                  keyLink(
+                    imagePath: ("assets/images/frozen.png"),
+                    name: 'egg',
+                  ),
+                  keyLink(
+                    imagePath: ("assets/images/moi.png"),
+                    name: 'Home care',
+                  ),
+                  keyLink(
+                    imagePath: ("assets/images/petcare.png"),
+                    name: 'petcare',
+                  ),
+                ],
+              ),
             ],
           ),
-          Padding(
-            padding: const EdgeInsets.all(23.0),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.center,
-              children: [
-                Row(
-                  children: [
-                    GestureDetector(
-                      onTap: () {
-                        Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                                builder: (context) => Beverages()));
-                      },
-                      child: Container(
-                        height: getScreenHeight(100),
-                        width: getScreenWidth(83),
-                        color: kWHTCOLOUR,
-                        child: Stack(
-                          children: [
-                            Image.asset(
-                              "assets/images/Beverages.png",
-                              width: getScreenWidth(106),
-                            ),
-                            const Text(
-                              "beverage",
-                              style: TextStyle(fontSize: 15, color: kWHTCOLOUR),
-                            ),
-                          ],
-                        ),
-                      ),
-                    ),
-                    Container(
-                      height: getScreenHeight(100),
-                      width: getScreenWidth(83),
-                      color: kWHTCOLOUR,
-                      child: Stack(
-                        children: [
-                          Image.asset(
-                            "assets/images/Bread.png",
-                            width: getScreenWidth(106),
-                          ),
-                          const Text(
-                            "beverage",
-                            style: TextStyle(fontSize: 15, color: kWHTCOLOUR),
-                          ),
-                        ],
-                      ),
-                    ),
-                    Container(
-                      height: getScreenHeight(100),
-                      width: getScreenWidth(83),
-                      color: kWHTCOLOUR,
-                      child: Stack(
-                        children: [
-                          Image.asset(
-                            "assets/images/tule.png",
-                            width: getScreenWidth(103),
-                          ),
-                          const Text(
-                            "beverage",
-                            style: TextStyle(fontSize: 15, color: kWHTCOLOUR),
-                          ),
-                        ],
-                      ),
-                    ),
-                    Container(
-                      height: getScreenHeight(100),
-                      width: getScreenWidth(83),
-                      color: kWHTCOLOUR,
-                      child: Stack(
-                        children: [
-                          Image.asset(
-                            "assets/images/egg.png",
-                            width: getScreenWidth(103),
-                          ),
-                          const Text(
-                            "beverage",
-                            style: TextStyle(fontSize: 15, color: kWHTCOLOUR),
-                          ),
-                        ],
-                      ),
-                    ),
-                  ],
-                ),
-                Row(
-                  children: [
-                    Stack(
-                      children: [
-                        Image.asset(
-                          "assets/images/Beverages.png",
-                        ),
-                        const Text(
-                          "beverage",
-                          style: TextStyle(fontSize: 15, color: kWHTCOLOUR),
-                        ),
-                      ],
-                    ),
-                    Stack(
-                      children: [
-                        Image.asset(
-                          "assets/images/Bread.png",
-                        ),
-                        const Text(
-                          "beverage",
-                          style: TextStyle(fontSize: 15, color: kWHTCOLOUR),
-                        ),
-                      ],
-                    ),
-                    Stack(
-                      children: [
-                        Image.asset(
-                          "assets/images/Beverages.png",
-                        ),
-                        const Text(
-                          "beverage",
-                          style: TextStyle(fontSize: 15, color: kWHTCOLOUR),
-                        ),
-                      ],
-                    ),
-                    Stack(
-                      children: [
-                        Image.asset(
-                          "assets/images/petcare.png",
-                        ),
-                        const Text(
-                          "beverage",
-                          style: TextStyle(fontSize: 15, color: kWHTCOLOUR),
-                        ),
-                      ],
-                    ),
-                  ],
-                ),
-              ],
-            ),
+          SizedBox(
+            height: getScreenHeight(20),
           ),
           Padding(
             padding: EdgeInsets.only(left: getScreenHeight(20)),
@@ -282,18 +197,18 @@ class _Home_dashboardState extends State<Home_dashboard> {
             ),
           ),
           Row(
-            children: [
+            children: const [
               contax(
-                title: 'Apple',
-                price: '25',
-                storeName: 'Tradly',
-                imagePath: Image.asset("assets/images/cocacola.png"),
+                productName: 'cocacola',
+                mainPrice: '25',
+                supplierName: 'Tradly',
+                imagePath: ("assets/images/cocacola.png"),
               ),
               contax(
-                title: 'Orange',
-                price: '25',
-                storeName: 'Tradly',
-                imagePath: Image.asset("assets/images/meat.png"),
+                productName: 'Brocolli',
+                mainPrice: '25',
+                supplierName: 'Tradly',
+                imagePath: ("assets/images/meat.png"),
               ),
             ],
           ),
@@ -334,17 +249,25 @@ class _Home_dashboardState extends State<Home_dashboard> {
           ),
           Row(
             children: [
-              contax(
-                title: 'Apple',
-                price: '25',
-                storeName: 'Tradly',
-                imagePath: Image.asset("assets/images/cocacola.png"),
+              GestureDetector(
+                onTap: () {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => const Product_details()));
+                },
+                child: const contax(
+                  productName: 'fish',
+                  mainPrice: '25',
+                  supplierName: 'Tradly',
+                  imagePath: "assets/images/fish.png",
+                ),
               ),
-              contax(
-                title: 'Orange',
-                price: '25',
-                storeName: 'Tradly',
-                imagePath: Image.asset("assets/images/meat.png"),
+              const contax(
+                productName: 'shampoo',
+                mainPrice: '25',
+                supplierName: 'Tradly',
+                imagePath: "assets/images/shapoo.png",
               ),
             ],
           ),
@@ -624,6 +547,34 @@ class _Home_dashboardState extends State<Home_dashboard> {
               label: "profile",
             )
           ]),
+    );
+  }
+}
+
+class keyLink extends StatelessWidget {
+  const keyLink({super.key, required this.name, required this.imagePath});
+  final String imagePath;
+  final String name;
+  @override
+  Widget build(BuildContext context) {
+    return GestureDetector(
+      onTap: () {
+        RouteNavigators.route(context, const Beverages());
+      },
+      child: Container(
+        height: getScreenHeight(80),
+        width: getScreenWidth(91),
+        decoration: BoxDecoration(
+          image:
+              DecorationImage(image: AssetImage(imagePath), fit: BoxFit.cover),
+        ),
+        child: Center(
+          child: Text(
+            name,
+            style: const TextStyle(color: kWHTCOLOUR),
+          ),
+        ),
+      ),
     );
   }
 }

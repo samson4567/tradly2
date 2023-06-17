@@ -23,99 +23,211 @@ class _ProfileState extends State<Profile> {
     return Scaffold(
       backgroundColor: kFlutsi,
       body: Stack(children: [
-       
-           Container(
-           height: getScreenHeight(800),
-            width: getScreenWidth(400),
-           color: kPRYCOLOUR,
+        Container(
+          height: getScreenHeight(400),
+          width: getScreenWidth(400),
+          color: kPRYCOLOUR,
+          child: Column(
+            children: [
+              Padding(
+                padding: EdgeInsets.only(
+                    top: getScreenWidth(60), left: getScreenWidth(40)),
+                child: Row(
+                  children: [
+                    const Text(
+                      "Profile",
+                      style: TextStyle(
+                          fontSize: 30,
+                          color: kWHTCOLOUR,
+                          fontWeight: FontWeight.bold),
+                    ),
+                    SizedBox(
+                      width: getScreenWidth(120),
+                    ),
+                    IconButton(
+                        onPressed: () {
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => const Wishlist()));
+                        },
+                        icon: const Icon(
+                          Icons.heart_broken,
+                          color: kWHTCOLOUR,
+                        )),
+                    IconButton(
+                        onPressed: () {
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => const MyCart()));
+                        },
+                        icon: const Icon(
+                          Icons.shop_two,
+                          color: kWHTCOLOUR,
+                        ))
+                  ],
+                ),
+              ),
+              SizedBox(
+                height: getScreenHeight(40),
+              ),
+              Padding(
+                padding: EdgeInsets.only(left: getScreenWidth(35)),
+                child: Row(
+                  children: [
+                    Container(
+                      height: getScreenHeight(70),
+                      width: getScreenWidth(70),
+                      decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(40),
+                          border: Border.all(color: kWHTCOLOUR),
+                          color: kPRYCOLOUR),
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          const Text(
+                            "T",
+                            style: TextStyle(
+                                fontSize: 40,
+                                color: kWHTCOLOUR,
+                                fontWeight: FontWeight.bold),
+                          ),
+                          Padding(
+                            padding: EdgeInsets.only(
+                              left: getScreenHeight(49),
+                            ),
+                            child: Container(
+                              height: getScreenHeight(20),
+                              width: getScreenWidth(20),
+                              decoration: BoxDecoration(
+                                  borderRadius: BorderRadius.circular(20),
+                                  border: Border.all(color: kWHTCOLOUR),
+                                  color: kWHTCOLOUR),
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                    SizedBox(
+                      width: getScreenWidth(20),
+                    ),
+                    Padding(
+                      padding: EdgeInsets.only(bottom: getScreenHeight(5)),
+                      child: Column(
+                        children: const [
+                          Text(
+                            "Tradly Team",
+                            style: TextStyle(
+                                color: kWHTCOLOUR,
+                                fontSize: 20,
+                                fontWeight: FontWeight.bold),
+                          ),
+                          Text(
+                            "+195573483858",
+                            style: TextStyle(
+                                color: kWHTCOLOUR,
+                                fontSize: 15,
+                                fontWeight: FontWeight.w300),
+                          ),
+                          Text(
+                            "info@tradly.co",
+                            style: TextStyle(
+                                color: kWHTCOLOUR,
+                                fontSize: 15,
+                                fontWeight: FontWeight.w300),
+                          ),
+                        ],
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ],
+          ),
+        ),
+        Padding(
+          padding: EdgeInsets.only(
+              top: getScreenHeight(250), left: getScreenWidth(12)),
+          child: Container(
+            height: getScreenHeight(320),
+            width: getScreenWidth(350),
+            decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(30),
+                shape: BoxShape.rectangle,
+                color: kWHTCOLOUR),
             child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Padding(
                   padding: EdgeInsets.only(
-                      top: getScreenWidth(60), left: getScreenWidth(40)),
-                  child: Row(
-                    children: [
-                      const Text(
-                        "Profile",
-                        style: TextStyle(
-                            fontSize: 30,
-                            color: kWHTCOLOUR,
-                            fontWeight: FontWeight.bold),
-                      ),
-                      SizedBox(
-                        width: getScreenWidth(120),
-                      ),
-                      IconButton(
-                          onPressed: () {
-                            Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                    builder: (context) => const Wishlist()));
-                          },
-                          icon: const Icon(
-                            Icons.heart_broken,
-                            color: kWHTCOLOUR,
-                          )),
-                      IconButton(
-                          onPressed: () {
-                            Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                    builder: (context) => const MyCart()));
-                          },
-                          icon: const Icon(
-                            Icons.shop_two,
-                            color: kWHTCOLOUR,
-                          ))
-                    ],
+                      top: getScreenHeight(20), left: getScreenWidth(20)),
+                  child: const Text(
+                    "Edit Profile",
+                    style: TextStyle(fontSize: 15),
                   ),
+                ),
+                const Text(
+                  "____________________________________",
+                  style: TextStyle(fontSize: 20, fontWeight: FontWeight.w100),
                 ),
                 Padding(
                   padding: EdgeInsets.only(
-                      right: getScreenWidth(180), top: getScreenHeight(30)),
-                  child: Container(
-                    height: getScreenHeight(70),
-                    width: getScreenWidth(70),
-                    decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(55),
-                        border: Border.all(color: kWHTCOLOUR),
-                        color: kPRYCOLOUR),
-                    child: Column(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        const Text(
-                          "T",
-                          style: TextStyle(
-                              fontSize: 40,
-                              color: kWHTCOLOUR,
-                              fontWeight: FontWeight.bold),
-                        ),
-                        Padding(
-                          padding: EdgeInsets.only(
-                            left: getScreenHeight(49),
-                          ),
-                          child: Container(
-                            height: getScreenHeight(20),
-                            width: getScreenWidth(20),
-                            decoration: BoxDecoration(
-                                borderRadius: BorderRadius.circular(20),
-                                border: Border.all(color: kWHTCOLOUR),
-                                color: kWHTCOLOUR),
-                          ),
-                        ),
-                      ],
-                    ),
+                      top: getScreenHeight(10), left: getScreenWidth(20)),
+                  child: const Text(
+                    "Language & Currency",
+                    style: TextStyle(fontSize: 15),
                   ),
                 ),
+                const Text(
+                  "____________________________________",
+                  style: TextStyle(fontSize: 20, fontWeight: FontWeight.w100),
+                ), Padding(
+                  padding: EdgeInsets.only(
+                      top: getScreenHeight(20), left: getScreenWidth(20)),
+                  child: const Text(
+                    "Feedback",
+                    style: TextStyle(fontSize: 15),
+                  ),
+                ),
+                const Text(
+                  "____________________________________",
+                  style: TextStyle(fontSize: 20, fontWeight: FontWeight.w100),
+                ),
+                Padding(
+                  padding: EdgeInsets.only(
+                      top: getScreenHeight(10), left: getScreenWidth(20)),
+                  child: const Text(
+                    "Refer a Friend",
+                    style: TextStyle(fontSize: 14),
+                  ),
+                ),
+                const Text(
+                  "____________________________________",
+                  style: TextStyle(fontSize: 20, fontWeight: FontWeight.w100),
+                ), Padding(
+                  padding: EdgeInsets.only(
+                      top: getScreenHeight(20), left: getScreenWidth(20)),
+                  child: const Text(
+                    "Terms/condition",
+                    style: TextStyle(fontSize: 15),
+                  ),
+                ),
+                const Text(
+                  "____________________________________",
+                  style: TextStyle(fontSize: 20, fontWeight: FontWeight.w100),
+                ),
+                Padding(
+                  padding: EdgeInsets.only(
+                      top: getScreenHeight(10), left: getScreenWidth(20)),
+                  child: const Text(
+                    "Logout",
+                    style: TextStyle(fontSize: 14),
+                  ),
+                ),
+                
               ],
             ),
-          ),
-        Padding(
-          padding: EdgeInsets.only(top: getScreenHeight(200)),
-          child: Container(
-            height: getScreenHeight(200),
-            width: getScreenWidth(350),
-            color: kWHTCOLOUR,
           ),
         )
       ]),

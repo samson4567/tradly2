@@ -1,6 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:tradly2/model/con_tax.dart';
+import 'package:tradly2/model/mainpage.dart';
 import 'package:tradly2/model/gro.dart';
 import 'package:tradly2/utilis/App_widget/app_color.dart';
 import 'package:tradly2/utilis/App_widget/dimention.dart';
@@ -245,34 +245,34 @@ class _Store_ProfileState extends State<Store_Profile> {
               ],
             ),
             Row(
-              children: [
+              children: const [
                 contax(
-                  title: 'chocolate',
-                  price: '25',
-                  storeName: 'Tradly',
-                  imagePath: Image.asset("assets/images/apple1.png"),
+                  productName: 'chocolate',
+                  mainPrice: '25',
+                  supplierName: 'Tradly',
+                  imagePath: "assets/images/apple1.png",
                 ),
                 contax(
-                  title: 'fruit Punch',
-                  price: '25',
-                  storeName: 'Tradly',
-                  imagePath: Image.asset("assets/images/orange.png"),
+                  productName: 'fruit Punch',
+                  mainPrice: '25',
+                  supplierName: 'Tradly',
+                  imagePath: "assets/images/orange.png",
                 ),
               ],
             ),
             Row(
-              children: [
+              children: const [
                 contax(
-                  title: 'chocolate',
-                  price: '25',
-                  storeName: 'Tradly',
-                  imagePath: Image.asset("assets/images/cream.png"),
+                  productName: 'chocolate',
+                  mainPrice: '25',
+                  supplierName: 'Tradly',
+                  imagePath: "assets/images/cream.png",
                 ),
                 contax(
-                  title: 'fruit Punch',
-                  price: '25',
-                  storeName: 'Tradly',
-                  imagePath: Image.asset("assets/images/meat.png"),
+                  productName: 'fruit Punch',
+                  mainPrice: '25',
+                  supplierName: 'Tradly',
+                 imagePath: "assets/images/meat.png",
                 ),
               ],
             ),
