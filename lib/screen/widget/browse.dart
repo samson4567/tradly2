@@ -29,7 +29,7 @@ class _BrowseState extends State<Browse> {
       body: ListView(
         children: [
           Container(
-            height: getScreenHeight(200),
+            height: getScreenHeight(220),
             width: getScreenWidth(200),
             color: kPRYCOLOUR,
             child: Column(
@@ -103,97 +103,18 @@ class _BrowseState extends State<Browse> {
                 SizedBox(
                   height: getScreenHeight(20),
                 ),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceAround,
-                  children: [
-                    Container(
-                      height: getScreenHeight(30),
-                      width: getScreenWidth(120),
-                      decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(30),
-                          border: Border.all(color: kWHTCOLOUR),
-                          color: kPRYCOLOUR),
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          const Icon(
-                            Icons.soap_sharp,
-                            color: kWHTCOLOUR,
-                          ),
-                          SizedBox(
-                            width: getScreenHeight(10),
-                          ),
-                          const Text(
-                            "Sort by",
-                            style: TextStyle(fontSize: 15, color: kWHTCOLOUR),
-                            textAlign: TextAlign.center,
-                          ),
-                        ],
-                      ),
-                    ),
-                    Container(
-                      height: getScreenHeight(30),
-                      width: getScreenWidth(120),
-                      decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(30),
-                          border: Border.all(color: kWHTCOLOUR),
-                          color: kPRYCOLOUR),
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          const Icon(
-                            Icons.share_location_outlined,
-                            color: kWHTCOLOUR,
-                          ),
-                          SizedBox(
-                            width: getScreenHeight(10),
-                          ),
-                          const Text(
-                            "Location",
-                            style: TextStyle(fontSize: 15, color: kWHTCOLOUR),
-                            textAlign: TextAlign.center,
-                          ),
-                        ],
-                      ),
-                    ),
-                    Container(
-                      height: getScreenHeight(30),
-                      width: getScreenWidth(120),
-                      decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(30),
-                          border: Border.all(color: kWHTCOLOUR),
-                          color: kPRYCOLOUR),
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          const Icon(
-                            Icons.arrow_circle_up_sharp,
-                            color: kWHTCOLOUR,
-                          ),
-                          SizedBox(
-                            width: getScreenHeight(10),
-                          ),
-                          const Text(
-                            "Category",
-                            style: TextStyle(fontSize: 15, color: kWHTCOLOUR),
-                            textAlign: TextAlign.center,
-                          ),
-                        ],
-                      ),
-                    ),
-                  ],
-                )
+                clerex()
               ],
             ),
           ),
-          Row(
+          Row( mainAxisAlignment: MainAxisAlignment.center,
             children: const [
-              contax(
+              Contax(
                   productName: 'Apple',
                   mainPrice: '25',
                   supplierName: 'Tradly',
                   imagePath: "assets/images/apple1.png"),
-              contax(
+              Contax(
                 productName: 'Orange',
                 mainPrice: '25',
                 supplierName: 'Tradly',
@@ -201,15 +122,15 @@ class _BrowseState extends State<Browse> {
               ),
             ],
           ),
-          Row(
+          Row( mainAxisAlignment: MainAxisAlignment.center,
             children: const [
-              contax(
+              Contax(
                 productName: 'Moisturzier',
                 mainPrice: '25',
                 supplierName: 'Tradly',
                 imagePath: "assets/images/cream.png",
               ),
-              contax(
+              Contax(
                 productName: 'Brocolli',
                 mainPrice: '25',
                 supplierName: 'Tradly',
@@ -217,23 +138,20 @@ class _BrowseState extends State<Browse> {
               ),
             ],
           ),
-          Padding(
-            padding: EdgeInsets.only(right: getScreenWidth(1)),
-            child: Row(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: const [
-                contax(
-                    productName: "chocolate",
-                    mainPrice: '25',
-                    supplierName: 'Tradly',
-                    imagePath: "assets/images/rat.png"),
-                contax(
-                    productName: 'Bread ',
-                    mainPrice: "25",
-                    supplierName: 'Tradly',
-                    imagePath: "assets/images/cronik.png"),
-              ],
-            ),
+          Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+            children: const [
+              Contax(
+                  productName: "chocolate",
+                  mainPrice: '25',
+                  supplierName: 'Tradly',
+                  imagePath: "assets/images/rat.png"),
+              Contax(
+                  productName: 'Bread ',
+                  mainPrice: "25",
+                  supplierName: 'Tradly',
+                  imagePath: "assets/images/cronik.png"),
+            ],
           ),
         ],
       ),
@@ -288,6 +206,96 @@ class _BrowseState extends State<Browse> {
               label: "profile",
             )
           ]),
+    );
+  }
+}
+
+class clerex extends StatelessWidget {
+  const clerex({
+    super.key,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.spaceAround,
+      children: [
+        Container(
+          height: getScreenHeight(30),
+          width: getScreenWidth(120),
+          decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(30),
+              border: Border.all(color: kWHTCOLOUR),
+              color: kPRYCOLOUR),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              const Icon(
+                Icons.soap_sharp,
+                color: kWHTCOLOUR,
+              ),
+              SizedBox(
+                width: getScreenHeight(10),
+              ),
+              const Text(
+                "Sort by",
+                style: TextStyle(fontSize: 15, color: kWHTCOLOUR),
+                textAlign: TextAlign.center,
+              ),
+            ],
+          ),
+        ),
+        Container(
+          height: getScreenHeight(30),
+          width: getScreenWidth(120),
+          decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(30),
+              border: Border.all(color: kWHTCOLOUR),
+              color: kPRYCOLOUR),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              const Icon(
+                Icons.share_location_outlined,
+                color: kWHTCOLOUR,
+              ),
+              SizedBox(
+                width: getScreenHeight(10),
+              ),
+              const Text(
+                "Location",
+                style: TextStyle(fontSize: 15, color: kWHTCOLOUR),
+                textAlign: TextAlign.center,
+              ),
+            ],
+          ),
+        ),
+        Container(
+          height: getScreenHeight(30),
+          width: getScreenWidth(120),
+          decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(30),
+              border: Border.all(color: kWHTCOLOUR),
+              color: kPRYCOLOUR),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              const Icon(
+                Icons.arrow_circle_up_sharp,
+                color: kWHTCOLOUR,
+              ),
+              SizedBox(
+                width: getScreenHeight(10),
+              ),
+              const Text(
+                "Category",
+                style: TextStyle(fontSize: 15, color: kWHTCOLOUR),
+                textAlign: TextAlign.center,
+              ),
+            ],
+          ),
+        ),
+      ],
     );
   }
 }

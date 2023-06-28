@@ -68,14 +68,32 @@ class _Order_HistoryState extends State<Order_History> {
                   SizedBox(
                     width: getScreenWidth(20),
                   ),
-                  Container(
-                    height: getScreenHeight(20),
-                    width: getScreenWidth(130),
-                    color: kFluti,
-                    child: const Text(
-                      "January 20",
-                      style: TextStyle(fontSize: 20),
-                      textAlign: TextAlign.center,
+                  Padding(
+                    padding: const EdgeInsets.symmetric(horizontal: 10),
+                    child: Container(
+                      height: getScreenHeight(25),
+                      width: getScreenWidth(90),
+                      decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(5),
+                          shape: BoxShape.rectangle,
+                          color: kFlutsi2),
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          GestureDetector(
+                            onTap: () {
+                              Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (context) => Browse()));
+                            },
+                            child: const Text(
+                              "Januari 2020",
+                              style: TextStyle(fontSize: 15, color: kPRYCOLOUR),
+                            ),
+                          ),
+                        ],
+                      ),
                     ),
                   ),
                 ],
@@ -350,7 +368,7 @@ class _Order_HistoryState extends State<Order_History> {
                   ),
                 ),
                 SizedBox(
-                  width: getScreenWidth(150),
+                  width: getScreenWidth(140),
                 ),
                 Container(
                   height: getScreenHeight(20),
@@ -365,7 +383,7 @@ class _Order_HistoryState extends State<Order_History> {
                     children: const [
                       Text(
                         "Processed",
-                        style: TextStyle(fontSize: 17, color: kPRYCOLOUR),
+                        style: TextStyle(fontSize: 15, color: kPRYCOLOUR),
                       ),
                     ],
                   ),
@@ -397,7 +415,7 @@ class _Order_HistoryState extends State<Order_History> {
               icon: GestureDetector(
                   onTap: () => Navigator.push(context,
                       MaterialPageRoute(builder: (context) => Browse())),
-                  child: const Icon(Icons.browse_gallery_outlined)),
+                  child: const Icon(Icons.search)),
               label: "Browse",
             ),
             BottomNavigationBarItem(

@@ -20,7 +20,7 @@ class SizeConfig {
 // Get the proportionate height as per screen size
 double getScreenHeight(double inputHeight) {
   final screenHeight = SizeConfig.screenHeight;
-  return (inputHeight / 812.0) * screenHeight!;
+  return (inputHeight / 906.0) * screenHeight!;
   //896 is the height used in the UI
 }
 

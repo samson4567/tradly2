@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:tradly2/model/mainpage.dart';
 import 'package:tradly2/screen/widget/add_product.dart';
 import 'package:tradly2/screen/widget/browse.dart';
 import 'package:tradly2/screen/widget/home_dashboard.dart';
@@ -183,18 +184,15 @@ class _Add_Product2State extends State<Add_Product2> {
                 left: getScreenWidth(20),
                 top: getScreenHeight(30)),
             child: TextFormField(
-                keyboardAppearance: Brightness.light,
-                textCapitalization: TextCapitalization.none,
-                keyboardType: TextInputType.visiblePassword,
                 decoration: InputDecoration(
-                  enabledBorder: OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(30),
-                      borderSide: BorderSide(color: kWHTCOLOUR)),
-                  labelText: "Search Product ",
-                  labelStyle: const TextStyle(color: kWHTCOLOUR),
-                  prefixIcon: const Icon(Icons.verified_outlined),
-                  prefixIconColor: kWHTCOLOUR,
-                )),
+              enabledBorder: OutlineInputBorder(
+                  borderRadius: BorderRadius.circular(30),
+                  borderSide: BorderSide(color: kWHTCOLOUR)),
+              labelText: "Search Product ",
+              labelStyle: const TextStyle(color: kWHTCOLOUR),
+              prefixIcon: const Icon(Icons.verified_outlined),
+              prefixIconColor: kWHTCOLOUR,
+            )),
           ),
           SizedBox(
             height: getScreenHeight(20),
@@ -216,68 +214,11 @@ class _Add_Product2State extends State<Add_Product2> {
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: [
-              Container(
-                height: getScreenHeight(200),
-                width: getScreenWidth(160),
-                decoration: BoxDecoration(
-                    border: Border.all(),
-                    borderRadius: BorderRadius.circular(30),
-                    color: kWHTCOLOUR),
-                child: Padding(
-                  padding: EdgeInsets.only(bottom: getScreenHeight(10)),
-                  child: Column(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Image.asset(
-                        "assets/images/meat.png",
-                      ),
-                      SizedBox(
-                        height: getScreenHeight(9),
-                      ),
-                      Padding(
-                        padding: EdgeInsets.only(right: getScreenWidth(70)),
-                        child: Text("Brocolli"),
-                      ),
-                      SizedBox(
-                        height: getScreenHeight(10),
-                      ),
-                      Padding(
-                        padding: EdgeInsets.only(left: getScreenWidth(26)),
-                        child: Row(
-                          children: [
-                            Container(
-                              height: getScreenHeight(20),
-                              width: getScreenWidth(20),
-                              decoration: BoxDecoration(
-                                  borderRadius: BorderRadius.circular(20),
-                                  shape: BoxShape.rectangle,
-                                  color: kPRYCOLOUR),
-                              child: Column(
-                                mainAxisAlignment: MainAxisAlignment.center,
-                                children: const [
-                                  Text(
-                                    "T",
-                                    style: TextStyle(
-                                        fontSize: 17, color: kWHTCOLOUR),
-                                  ),
-                                ],
-                              ),
-                            ),
-                            SizedBox(
-                              width: getScreenWidth(10),
-                            ),
-                            const Text("Tradly"),
-                            SizedBox(
-                              width: getScreenWidth(40),
-                            ),
-                            Text("25")
-                          ],
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
-              ),
+              const Contax(
+                  imagePath: 'assets/images/meat.png',
+                  productName: 'Brocolli',
+                  supplierName: 'Tradly',
+                  mainPrice: '\$25'),
               GestureDetector(
                 onTap: () {
                   Navigator.push(

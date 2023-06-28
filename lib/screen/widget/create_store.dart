@@ -58,280 +58,100 @@ class _My_StoreState extends State<My_Store> {
           SizedBox(
             height: getScreenHeight(40),
           ),
-          Padding(
-            padding: EdgeInsets.only(left: getScreenWidth(50)),
-            child: const Text(
-              "This information is used to setup ",
-              style: TextStyle(fontSize: 20),
-            ),
+          Column(
+            children: const [
+              Text(
+                "This information is used to setup ",
+                style: TextStyle(fontSize: 20),
+              ),
+              Text(
+                "Your Shop",
+                style: TextStyle(fontSize: 20),
+              ),
+            ],
           ),
-          Padding(
-            padding: EdgeInsets.only(left: getScreenWidth(130)),
-            child: const Text(
-              "Your Shop",
-              style: TextStyle(fontSize: 20),
+          SizedBox(
+            height: getScreenHeight(25),
+          ),
+          const Classic(
+            title: 'storeName',
+            realName: 'TradlyStore',
+          ),
+          const Classic(
+            title: 'store web Address',
+            realName: 'tradly.app',
+          ),
+          const Classic(
+            title: 'Store Web Address',
+            realName: 'tradly.app',
+          ),
+          const Classic(
+            title: 'storAddress',
+            realName: 'Sell Groceries and Home care Product',
+          ),
+          const Classic(
+            title: 'storeType',
+            realName: 'Groceries Stores',
+          ),
+          const Classic(
+            title: 'Address',
+            realName: '125, crescent Ave,Woodbury',
+          ),
+          const Classic(
+            title: 'country ',
+            realName: 'usa',
+          ),
+          const Classic(
+            title: 'Coureir Name',
+            realName: 'Blue Dart',
+          ),
+          Container(
+            height: 50,
+            width: 200,
+            color: kWHTCOLOUR,
+            child: Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 20),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  const Text(
+                    'Tagline',
+                    style: TextStyle(fontSize: 12, fontWeight: FontWeight.w200),
+                  ),
+                  SizedBox(
+                    height: getScreenHeight(7),
+                  ),
+                  Container(
+                    height: getScreenHeight(25),
+                    width: getScreenWidth(110),
+                    decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(30),
+                        border: Border.all(),
+                        color: kFluts),
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: const [
+                        Text(
+                          "Groceries X",
+                          style: TextStyle(fontSize: 17, color: kBLKCOLOUR),
+                        ),
+                      ],
+                    ),
+                  ),
+                ],
+              ),
             ),
           ),
           SizedBox(
-            height: getScreenHeight(20),
+            height: getScreenHeight(10),
           ),
-          Container(
-              decoration: BoxDecoration(
-                  color: kWHTCOLOUR, borderRadius: BorderRadius.circular(10)),
-              height: getScreenHeight(90),
-              width: getScreenWidth(380),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Padding(
-                    padding: EdgeInsets.only(
-                        left: getScreenWidth(15), top: getScreenHeight(15)),
-                    child: const Text(
-                      "Store Name",
-                      style: TextStyle(fontSize: 20, color: kPRYCOLOUR),
-                    ),
-                  ),
-                  SizedBox(
-                    height: getScreenHeight(10),
-                  ),
-                  Padding(
-                    padding: EdgeInsets.only(left: getScreenWidth(10)),
-                    child: const Text("Tradly Store",
-                        style: TextStyle(fontSize: 25)),
-                  ),
-                  SizedBox(
-                    height: getScreenHeight(15),
-                  )
-                ],
-              )),
-          Container(
-              decoration: BoxDecoration(
-                  color: kWHTCOLOUR, borderRadius: BorderRadius.circular(10)),
-              height: getScreenHeight(90),
-              width: getScreenWidth(380),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Padding(
-                    padding: EdgeInsets.only(
-                        left: getScreenWidth(15), top: getScreenHeight(15)),
-                    child: const Text(
-                      "Store Web Address",
-                      style: TextStyle(fontSize: 20, color: kPRYCOLOUR),
-                    ),
-                  ),
-                  SizedBox(
-                    height: getScreenHeight(10),
-                  ),
-                  Padding(
-                    padding: EdgeInsets.only(left: getScreenWidth(10)),
-                    child: const Text("tradly.app",
-                        style: TextStyle(fontSize: 25)),
-                  ),
-                ],
-              )),
-          Container(
-              decoration: BoxDecoration(
-                  color: kWHTCOLOUR, borderRadius: BorderRadius.circular(10)),
-              height: getScreenHeight(90),
-              width: getScreenWidth(380),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Padding(
-                    padding: EdgeInsets.only(
-                        left: getScreenWidth(15), top: getScreenHeight(15)),
-                    child: const Text(
-                      "Store Description",
-                      style: TextStyle(fontSize: 20, color: kPRYCOLOUR),
-                    ),
-                  ),
-                  SizedBox(
-                    height: getScreenHeight(10),
-                  ),
-                  Padding(
-                    padding: EdgeInsets.only(left: getScreenWidth(10)),
-                    child: const Text("Sell Groceries and home care product ",
-                        style: TextStyle(fontSize: 23)),
-                  ),
-                ],
-              )),
-          Container(
-              decoration: BoxDecoration(
-                  color: kWHTCOLOUR, borderRadius: BorderRadius.circular(10)),
-              height: getScreenHeight(90),
-              width: getScreenWidth(380),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Padding(
-                    padding: EdgeInsets.only(
-                        left: getScreenWidth(15), top: getScreenHeight(15)),
-                    child: const Text(
-                      "Store Type",
-                      style: TextStyle(fontSize: 20, color: kPRYCOLOUR),
-                    ),
-                  ),
-                  SizedBox(
-                    height: getScreenHeight(10),
-                  ),
-                  Padding(
-                    padding: EdgeInsets.only(left: getScreenWidth(10)),
-                    child: const Text("Groceries home",
-                        style: TextStyle(fontSize: 25)),
-                  ),
-                ],
-              )),
-          Container(
-              decoration: BoxDecoration(
-                  color: kWHTCOLOUR, borderRadius: BorderRadius.circular(10)),
-              height: getScreenHeight(90),
-              width: getScreenWidth(380),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Padding(
-                    padding: EdgeInsets.only(
-                        left: getScreenWidth(15), top: getScreenHeight(15)),
-                    child: const Text(
-                      "Address",
-                      style: TextStyle(fontSize: 20, color: kPRYCOLOUR),
-                    ),
-                  ),
-                  SizedBox(
-                    height: getScreenHeight(10),
-                  ),
-                  Padding(
-                    padding: EdgeInsets.only(left: getScreenWidth(10)),
-                    child: const Text(" Cresent Ave, Woodbury",
-                        style: TextStyle(fontSize: 25)),
-                  ),
-                ],
-              )),
-          Container(
-              decoration: BoxDecoration(
-                  color: kWHTCOLOUR, borderRadius: BorderRadius.circular(10)),
-              height: getScreenHeight(90),
-              width: getScreenWidth(380),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Padding(
-                    padding: EdgeInsets.only(
-                        left: getScreenWidth(15), top: getScreenHeight(15)),
-                    child: const Text(
-                      "City",
-                      style: TextStyle(fontSize: 20, color: kPRYCOLOUR),
-                    ),
-                  ),
-                  SizedBox(
-                    height: getScreenHeight(10),
-                  ),
-                  Padding(
-                    padding: EdgeInsets.only(left: getScreenWidth(10)),
-                    child: const Text("125, Cresent Ave, Woodbury",
-                        style: TextStyle(fontSize: 25)),
-                  ),
-                ],
-              )),
-          Container(
-              decoration: BoxDecoration(
-                  color: kWHTCOLOUR, borderRadius: BorderRadius.circular(10)),
-              height: getScreenHeight(90),
-              width: getScreenWidth(380),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Padding(
-                    padding: EdgeInsets.only(
-                        left: getScreenWidth(15), top: getScreenHeight(15)),
-                    child: const Text(
-                      "Country",
-                      style: TextStyle(fontSize: 20, color: kPRYCOLOUR),
-                    ),
-                  ),
-                  SizedBox(
-                    height: getScreenHeight(10),
-                  ),
-                  Padding(
-                    padding: EdgeInsets.only(left: getScreenWidth(10)),
-                    child: const Text("USA", style: TextStyle(fontSize: 25)),
-                  ),
-                ],
-              )),
-          Container(
-              decoration: BoxDecoration(
-                  color: kWHTCOLOUR, borderRadius: BorderRadius.circular(10)),
-              height: getScreenHeight(90),
-              width: getScreenWidth(380),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Padding(
-                    padding: EdgeInsets.only(
-                        left: getScreenWidth(15), top: getScreenHeight(15)),
-                    child: const Text(
-                      "Courier Name",
-                      style: TextStyle(fontSize: 20, color: kPRYCOLOUR),
-                    ),
-                  ),
-                  SizedBox(
-                    height: getScreenHeight(10),
-                  ),
-                  Padding(
-                    padding: EdgeInsets.only(left: getScreenWidth(10)),
-                    child:
-                        const Text("Blue Dart", style: TextStyle(fontSize: 25)),
-                  ),
-                ],
-              )),
-          Container(
-              decoration: BoxDecoration(
-                  color: kWHTCOLOUR, borderRadius: BorderRadius.circular(10)),
-              height: getScreenHeight(90),
-              width: getScreenWidth(380),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Padding(
-                    padding: EdgeInsets.only(
-                        left: getScreenWidth(15), top: getScreenHeight(15)),
-                    child: const Text(
-                      "Tagline",
-                      style: TextStyle(fontSize: 20, color: kPRYCOLOUR),
-                    ),
-                  ),
-                  SizedBox(
-                    height: getScreenHeight(10),
-                  ),
-                  Padding(
-                    padding: EdgeInsets.only(left: getScreenWidth(10)),
-                    child: Container(
-                      height: getScreenHeight(25),
-                      width: getScreenWidth(110),
-                      decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(30),
-                          border: Border.all(),
-                          color: kFluts),
-                      child: Column(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: const [
-                          Text(
-                            "Order placed",
-                            style: TextStyle(fontSize: 17, color: kBLKCOLOUR),
-                          ),
-                        ],
-                      ),
-                    ),
-                  ),
-                ],
-              )),
-          GestureDetector(onTap: () {
-            Navigator.push(context, MaterialPageRoute(builder: (context)=>const Store2()));
-          },
+          GestureDetector(
+            onTap: () {
+              Navigator.push(context,
+                  MaterialPageRoute(builder: (context) => const Store2()));
+            },
             child: Padding(
-              padding: EdgeInsets.only(
-                  right: getScreenWidth(30), left: getScreenWidth(30)),
+              padding: const EdgeInsets.symmetric(horizontal: 70),
               child: Container(
                 height: getScreenHeight(50),
                 width: getScreenWidth(20),
@@ -352,5 +172,50 @@ class _My_StoreState extends State<My_Store> {
             ),
           ),
         ]));
+  }
+}
+
+class Classic extends StatelessWidget {
+  const Classic({
+    required this.title,
+    required this.realName,
+    super.key,
+  });
+  final String title;
+  final String realName;
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      decoration: BoxDecoration(
+          borderRadius: const BorderRadius.all(Radius.zero),
+          color: Colors.white,
+          boxShadow: [
+            BoxShadow(blurRadius: 9, color: Colors.black.withOpacity(0.06))
+          ]),
+      child: Padding(
+        padding: const EdgeInsets.symmetric(horizontal: 20),
+        child: Expanded(
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Text(
+                title,
+                style: const TextStyle(fontWeight: FontWeight.w200),
+              ),
+              SizedBox(
+                height: getScreenHeight(10),
+              ),
+              Text(
+                realName,
+                style: const TextStyle(fontWeight: FontWeight.w400),
+              ),
+              SizedBox(
+                height: getScreenHeight(15),
+              ),
+            ],
+          ),
+        ),
+      ),
+    );
   }
 }

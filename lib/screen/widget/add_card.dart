@@ -1,5 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:tradly2/screen/widget/browse.dart';
+import 'package:tradly2/screen/widget/create_store.dart';
 import 'package:tradly2/utilis/App_widget/app_color.dart';
 
 import '../../utilis/App_widget/dimention.dart';
@@ -26,7 +28,7 @@ class _Add_CardState extends State<Add_Card> {
               child: Row(
                 children: [
                   Padding(
-                    padding: const EdgeInsets.all(8.0),
+                    padding: const EdgeInsets.all(15.0),
                     child: InkWell(
                       onTap: () => Navigator.pop(context),
                       child: const Icon(
@@ -35,148 +37,115 @@ class _Add_CardState extends State<Add_Card> {
                       ),
                     ),
                   ),
-                  Padding(
-                    padding: EdgeInsets.only(left: getScreenWidth(70)),
-                    child: const Text(
-                      "Add Card",
-                      style: TextStyle(
-                          fontSize: 30,
-                          fontWeight: FontWeight.bold,
-                          color: kWHTCOLOUR),
-                      textAlign: TextAlign.center,
-                    ),
+                  SizedBox(
+                    width: getScreenWidth(60),
+                  ),
+                  const Text(
+                    "Add Card",
+                    style: TextStyle(
+                        fontSize: 30,
+                        color: kWHTCOLOUR,
+                        fontWeight: FontWeight.bold),
                   )
                 ],
               ),
             ),
             Padding(
-              padding: EdgeInsets.only(
-                  top: getScreenHeight(100), left: getScreenWidth(40)),
+              padding: EdgeInsets.symmetric(
+                  horizontal: getScreenWidth(70),
+                  vertical: getScreenHeight(90)),
               child: Container(
-                height: getScreenHeight(186),
-                width: getScreenWidth(300),
-                color: kFluts,
-                child: Image.asset("assets/images/visa.png"),
+                height: getScreenHeight(200),
+                width: getScreenWidth(500),
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(getScreenHeight(10)),
+                  color: kWHTCOLOUR,
+                ),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Expanded(
+                      child: Align(
+                        alignment: Alignment.topCenter,
+                        child: Container(
+                          height: getScreenHeight(210),
+                          width: double.maxFinite,
+                          decoration: BoxDecoration(
+                              borderRadius: BorderRadius.only(
+                                  topLeft: Radius.circular(
+                                    getScreenHeight(10),
+                                  ),
+                                  topRight: Radius.circular(
+                                    getScreenHeight(10),
+                                  )),
+                              image: const DecorationImage(
+                                  image: AssetImage('assets/images/visa.png'),
+                                  fit: BoxFit.fill)),
+                          //  child: Image.asset(imagePath, fit: BoxFit.fill,),
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
               ),
-            )
+            ),
           ]),
+          const Classic(
+            title: 'Card Number ',
+            realName: '4000 1234 1234',
+          ),
+          const Classic(
+            title: 'Name',
+            realName: 'Tradly',
+          ),
           SizedBox(
-            height: getScreenHeight(60),
+            height: getScreenHeight(1),
           ),
           Container(
-            height: getScreenHeight(450),
-            width: getScreenWidth(400),
+            height: getScreenHeight(200),
+            width: getScreenWidth(200),
             color: kWHTCOLOUR,
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
+            child: Row(
               children: [
-                Padding(
-                  padding: EdgeInsets.only(
-                    left: getScreenWidth(16),
-                    top: getScreenHeight(20),
-                  ),
-                  child: const Text(
-                    "Card Number",
-                    style: TextStyle(
-                        fontSize: 17,
-                        fontWeight: FontWeight.normal,
-                        color: kPRYCOLOUR),
-                  ),
+                const Classic(
+                  title: 'Card Number ',
+                  realName: '4000 1234 1234',
                 ),
                 SizedBox(
-                  height: getScreenHeight(10),
+                  width: getScreenWidth(140),
                 ),
-                Padding(
-                  padding: EdgeInsets.only(left: getScreenWidth(15)),
-                  child: const Text(
-                    "4000 1234 1234 9010",
-                    style: TextStyle(
-                        fontSize: 17,
-                        fontWeight: FontWeight.w500,
-                        color: kBLKCOLOUR),
-                  ),
+                const Classic(
+                  title: 'CVC ',
+                  realName: '***',
                 ),
-                const Text(
-                  "_______________________________________",
-                  style: TextStyle(fontSize: 20, fontWeight: FontWeight.w100),
-                ),
-                Padding(
-                  padding: EdgeInsets.only(left: getScreenWidth(20)),
-                  child: const Text(
-                    "Name",
-                    style: TextStyle(
-                        fontSize: 17,
-                        fontWeight: FontWeight.normal,
-                        color: kPRYCOLOUR),
-                  ),
-                ),
-                SizedBox(
-                  height: getScreenHeight(10),
-                ),
-                Padding(
-                  padding: EdgeInsets.only(left: getScreenWidth(20)),
-                  child: const Text(
-                    "Tradly",
-                    style: TextStyle(
-                        fontSize: 17,
-                        fontWeight: FontWeight.w500,
-                        color: kBLKCOLOUR),
-                  ),
-                ),
-                Padding(
-                  padding:  EdgeInsets.only(left: getScreenWidth(20)),
-                  child: const Text(
-                    "___________________________________ ",
-                    style: TextStyle(fontSize: 20, fontWeight: FontWeight.w100),
-                  ),
-                ),
-                Padding(
-                  padding: EdgeInsets.only(left: getScreenWidth(20)),
-                  child: const Text(
-                    "Expires Dates",
-                    style: TextStyle(
-                        fontSize: 17,
-                        fontWeight: FontWeight.normal,
-                        color: kPRYCOLOUR),
-                  ),
-                ),SizedBox(height: getScreenHeight(20),),
-                Padding(
-                  padding: EdgeInsets.only(left: getScreenWidth(20)),
-                  child: const Text(
-                    "Tradly",
-                    style: TextStyle(
-                        fontSize: 17,
-                        fontWeight: FontWeight.w500,
-                        color: kBLKCOLOUR),
-                  ),
-                ),
-                Padding(
-                  padding:  EdgeInsets.only(left: getScreenWidth(20)),
-                  child: const Text(
-                    "_________________________",
-                    style: TextStyle(fontSize: 20, fontWeight: FontWeight.w100),
-                  ),
-                ),
-            Padding(
-                  padding: EdgeInsets.only(top: getScreenHeight(100), left: getScreenWidth(50)),
-                  child: Container(
-                    height: getScreenHeight(40),
-                    width: getScreenWidth(270),
-                    decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(30),
-                        shape: BoxShape.rectangle,
-                        color: kPRYCOLOUR),
-                    child: Column(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: const [
-                        Text(
-                          "Add Credit Card",
-                          style: TextStyle(fontSize: 17, color: kWHTCOLOUR),
-                        ),
-                      ],
+              ],
+            ),
+          ),
+          SizedBox(
+            height: getScreenHeight(80),
+          ),
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 80),
+            child: Container(
+              height: getScreenHeight(40),
+              decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(30),
+                  shape: BoxShape.rectangle,
+                  color: kPRYCOLOUR),
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  GestureDetector(onTap: () {
+                    Navigator.push(context, MaterialPageRoute(builder: (context)=> Browse()));
+                  },
+                    child: const Text(
+                      "Add Credit Card ",
+                      style: TextStyle(fontSize: 17, color: kWHTCOLOUR),
                     ),
                   ),
-                ),  ],
+                ],
+              ),
             ),
           ),
         ],

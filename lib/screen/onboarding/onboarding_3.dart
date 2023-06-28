@@ -20,7 +20,7 @@ class _Onboarding_3State extends State<Onboarding_3> {
             children: [
               Container(
                   color: kPRYCOLOUR,
-                  height: getScreenHeight(400),
+                  height: getScreenHeight(418),
                   width: getScreenWidth(400),
                   child: Padding(
                     padding: const EdgeInsets.only(top: 50),

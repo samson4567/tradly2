@@ -1,3 +1,4 @@
+
 class ProductNameModel {
   final String imagePath, productName, supplierName, mainPrice;
   final String? discoutedPrice;
@@ -305,7 +306,7 @@ class ProductPageModel {
 }
 final List<ProductPageModel> fullPageList = [
   ProductPageModel(
-    pageName: 'Beverages',
+    pageName: "Beverages",
     productList: bevergaseList,
   ),
 ];

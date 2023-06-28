@@ -25,11 +25,9 @@ class Heading extends StatelessWidget {
                 padding: const EdgeInsets.all(8.0),
                 child: InkWell(
                   onTap: () => Navigator.pop(context),
-                  child: const Padding(
-                    padding: EdgeInsets.only(
-                      right: 50,
-                    ),
-                    child: Icon(
+                  child: Padding(
+                    padding: EdgeInsets.only(right: getScreenWidth(50)),
+                    child: const Icon(
                       Icons.arrow_back,
                       color: kWHTCOLOUR,
                     ),
@@ -41,8 +39,8 @@ class Heading extends StatelessWidget {
               ),
               Text(
                 title,
-                style: const TextStyle(
-                    fontSize: 30,
+                style: TextStyle(
+                    fontSize: getScreenHeight(30),
                     fontWeight: FontWeight.bold,
                     color: kWHTCOLOUR),
               )
@@ -96,9 +94,9 @@ class Heading extends StatelessWidget {
                     SizedBox(
                       width: getScreenHeight(10),
                     ),
-                    const Text(
+                     Text(
                       "location",
-                      style: TextStyle(fontSize: 13, color: kWHTCOLOUR),
+                      style: TextStyle(fontSize: getScreenHeight(13), color: kWHTCOLOUR),
                       textAlign: TextAlign.center,
                     ),
                   ],
@@ -121,9 +119,9 @@ class Heading extends StatelessWidget {
                     SizedBox(
                       width: getScreenHeight(10),
                     ),
-                    const Text(
+                     Text(
                       "category",
-                      style: TextStyle(fontSize: 13, color: kWHTCOLOUR),
+                      style: TextStyle(fontSize: getScreenHeight(13), color: kWHTCOLOUR),
                       textAlign: TextAlign.center,
                     ),
                   ],

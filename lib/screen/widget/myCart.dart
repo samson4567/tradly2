@@ -1,7 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:tradly2/screen/widget/add_adress.dart';
-import 'package:tradly2/screen/onboarding/onboarding_2.dart';
 import 'package:tradly2/screen/widget/payment_option.dart';
 import 'package:tradly2/utilis/App_widget/app_color.dart';
 import 'package:tradly2/utilis/App_widget/dimention.dart';
@@ -26,7 +25,7 @@ class _MyCartState extends State<MyCart> {
       body: Column(
         children: [
           Container(
-            height: getScreenHeight(70),
+            height: getScreenHeight(80),
             width: getScreenWidth(400),
             color: kWHTCOLOUR,
             child: Padding(
@@ -81,7 +80,7 @@ class _MyCartState extends State<MyCart> {
                       Row(
                         children: [
                           const Text(
-                            "25",
+                            "\$25",
                             style: TextStyle(
                                 fontSize: 20,
                                 color: kPRYCOLOUR,
@@ -157,7 +156,7 @@ class _MyCartState extends State<MyCart> {
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: const [
                       Text("price(1 item)"),
-                      Text("25"),
+                      Text("\$25"),
                     ],
                   ),
                 ),
@@ -198,7 +197,7 @@ class _MyCartState extends State<MyCart> {
                             fontSize: 20, fontWeight: FontWeight.w500),
                       ),
                       Text(
-                        "25",
+                        "\$25",
                         style: TextStyle(
                             fontSize: 20, fontWeight: FontWeight.w500),
                       ),
@@ -213,34 +212,29 @@ class _MyCartState extends State<MyCart> {
           ),
           Padding(
             padding: EdgeInsets.only(top: getScreenHeight(70)),
-            child: Container(
-              height: getScreenHeight(50),
-              width: getScreenWidth(300),
-              color: kWHTCOLOUR,
-              child: GestureDetector(
-                onTap: () {
-                  Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                          builder: (context) => const Payment_Option()));
-                },
-                child: Container(
-                  height: getScreenHeight(40),
-                  width: getScreenWidth(200),
-                  decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(30),
-                      shape: BoxShape.rectangle,
-                      color: kPRYCOLOUR),
-                  child: Column(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: const [
-                      Text(
-                        "continue to payment",
-                        style: TextStyle(fontSize: 25, color: kWHTCOLOUR),
-                        textAlign: TextAlign.center,
-                      ),
-                    ],
-                  ),
+            child: GestureDetector(
+              onTap: () {
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => const Payment_Option()));
+              },
+              child: Container(
+                height: getScreenHeight(55),
+                width: getScreenWidth(250),
+                decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(30),
+                    shape: BoxShape.rectangle,
+                    color: kPRYCOLOUR),
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: const [
+                    Text(
+                      "continue to payment",
+                      style: TextStyle(fontSize: 25, color: kWHTCOLOUR),
+                      textAlign: TextAlign.center,
+                    ),
+                  ],
                 ),
               ),
             ),

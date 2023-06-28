@@ -245,10 +245,10 @@ class _Add_ProductState extends State<Add_Product> {
                   ),
                 ),
                 SizedBox(
-                  height: getScreenHeight(10),
+                  height: getScreenHeight(6),
                 ),
                 Padding(
-                  padding: EdgeInsets.only(left: getScreenWidth(15)),
+                  padding: EdgeInsets.only(left: getScreenWidth(10)),
                   child: const Text(
                     " adflhavdfahjbfgusfhfbvsdfjlkdsbvhfldfvklsdvjlsdkvfhlvbf,f vrdsa,fdsgvf,grfhsdgbvfdfefvfdvnugvdndsurjvfjhgvbkddfugjvnfhfksfsfcjfuledu",
                     style: TextStyle(fontSize: 20),
@@ -258,7 +258,7 @@ class _Add_ProductState extends State<Add_Product> {
             ),
           ),
           SizedBox(
-            height: getScreenHeight(2),
+            height: getScreenHeight(4),
           ),
           Container(
             height: getScreenHeight(80),
@@ -389,20 +389,23 @@ class _Add_ProductState extends State<Add_Product> {
                   MaterialPageRoute(
                       builder: (context) => const Add_Product2()));
             },
-            child: Container(
-              height: getScreenHeight(40),
-              width: getScreenWidth(100),
-              decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(30), color: kPRYCOLOUR),
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: const [
-                  Text(
-                    "Add Product",
-                    style: TextStyle(fontSize: 25, color: kWHTCOLOUR),
-                    textAlign: TextAlign.center,
-                  ),
-                ],
+            child: Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 60),
+              child: Container(
+                height: getScreenHeight(40),
+                width: getScreenWidth(100),
+                decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(30), color: kPRYCOLOUR),
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: const [
+                    Text(
+                      "Add Product",
+                      style: TextStyle(fontSize: 25, color: kWHTCOLOUR),
+                      textAlign: TextAlign.center,
+                    ),
+                  ],
+                ),
               ),
             ),
           ),

@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:tradly2/screen/widget/browse.dart';
 import 'package:tradly2/screen/widget/home_dashboard.dart';
+import 'package:tradly2/screen/widget/login_screen.dart';
 import 'package:tradly2/screen/widget/myCart.dart';
 import 'package:tradly2/screen/widget/order_history.dart';
 import 'package:tradly2/screen/widget/wishlist.dart';
@@ -220,9 +221,15 @@ class _ProfileState extends State<Profile> {
                 Padding(
                   padding: EdgeInsets.only(
                       top: getScreenHeight(10), left: getScreenWidth(20)),
-                  child: const Text(
-                    "Logout",
-                    style: TextStyle(fontSize: 14),
+                  child: GestureDetector(
+                     onTap: () => Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => Login_Screen())),
+                    child: const Text(
+                      "Logout",
+                      style: TextStyle(fontSize: 14),
+                    ),
                   ),
                 ),
                 

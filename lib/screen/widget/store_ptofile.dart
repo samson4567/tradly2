@@ -57,7 +57,7 @@ class _Store_ProfileState extends State<Store_Profile> {
             ),
             Container(
               //decoration: BoxDecoration(),
-              height: getScreenHeight(225),
+              height: getScreenHeight(240),
               width: getScreenWidth(400),
               color: kWHTCOLOUR,
               child: Padding(
@@ -244,37 +244,41 @@ class _Store_ProfileState extends State<Store_Profile> {
                 ),
               ],
             ),
-            Row(
-              children: const [
-                contax(
-                  productName: 'chocolate',
-                  mainPrice: '25',
-                  supplierName: 'Tradly',
-                  imagePath: "assets/images/apple1.png",
-                ),
-                contax(
-                  productName: 'fruit Punch',
-                  mainPrice: '25',
-                  supplierName: 'Tradly',
-                  imagePath: "assets/images/orange.png",
-                ),
-              ],
+          Expanded(
+              child: Row(mainAxisAlignment: MainAxisAlignment.center,
+                children: const [
+                  Contax(
+                    productName: 'chocolate',
+                    mainPrice: '25',
+                    supplierName: 'Tradly',
+                    imagePath: "assets/images/apple1.png",
+                  ),
+                  Contax(
+                    productName: 'fruit Punch',
+                    mainPrice: '25',
+                    supplierName: 'Tradly',
+                    imagePath: "assets/images/orange.png",
+                  ),
+                ],
+              ),
             ),
-            Row(
-              children: const [
-                contax(
-                  productName: 'chocolate',
-                  mainPrice: '25',
-                  supplierName: 'Tradly',
-                  imagePath: "assets/images/cream.png",
-                ),
-                contax(
-                  productName: 'fruit Punch',
-                  mainPrice: '25',
-                  supplierName: 'Tradly',
-                 imagePath: "assets/images/meat.png",
-                ),
-              ],
+            Expanded(
+              child: Row( mainAxisAlignment: MainAxisAlignment.center,
+                children: const [
+                  Contax(
+                    productName: 'chocolate',
+                    mainPrice: '25',
+                    supplierName: 'Tradly',
+                    imagePath: "assets/images/cream.png",
+                  ),
+                  Contax(
+                    productName: 'fruit Punch',
+                    mainPrice: '25',
+                    supplierName: 'Tradly',
+                   imagePath: "assets/images/meat.png",
+                  ),
+                ],
+              ),
             ),
           ],
         ));

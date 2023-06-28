@@ -100,7 +100,7 @@ class _StoreState extends State<Store> {
                   onTap: () => Navigator.push(
                       context,
                       MaterialPageRoute(
-                          builder: (context) => Product_details())),
+                          builder: (context) => Product_Details())),
                   child: const Icon(Icons.home)),
               label: "home",
             ),
@@ -108,7 +108,7 @@ class _StoreState extends State<Store> {
               icon: GestureDetector(
                   onTap: () => Navigator.push(context,
                       MaterialPageRoute(builder: (context) => Browse())),
-                  child: const Icon(Icons.browse_gallery_outlined)),
+                  child: const Icon(Icons.search)),
               label: "Browse",
             ),
             BottomNavigationBarItem(

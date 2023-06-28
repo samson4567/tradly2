@@ -15,7 +15,7 @@ class Onboarding_1 extends StatelessWidget {
             children: [
               Container(
                   color: kPRYCOLOUR,
-                  height: getScreenHeight(400),
+                  height: getScreenHeight(418),
                   width: getScreenWidth(400),
                   child: Padding(
                     padding: const EdgeInsets.only(top: 50),
